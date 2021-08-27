@@ -5,3 +5,5 @@
 4. añadir en app.js //import React from 'react';
 5. borrar las partes donde dice logo.svg para que no de error
 6. Borrar todo en App.cs dejarlo en blanco 
+7.crear en app.js menu y list
+8. crear el archivo Menu.js y List.js
