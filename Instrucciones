@@ -1,0 +1,7 @@
+//crear la carpeta donde se guardara el proyecto 
+1. abrir la carpeta y en la terminal poner el comnado: create-react-app amozon el ultimo es el nombre de la app
+2. iniciar el programa con el comnado npm start
+3. ir app.js borrar lo que esta dentro del return
+4. añadir en app.js //import React from 'react';
+5. borrar las partes donde dice logo.svg para que no de error
+6. Borrar todo en App.cs dejarlo en blanco 
