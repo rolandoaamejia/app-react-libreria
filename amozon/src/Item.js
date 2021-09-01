@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
 import './Item.css';
+
 
 class Item extends React.Component{
 
@@ -8,44 +8,46 @@ class Item extends React.Component{
         super(props);
 
         this.state = {
-           stars: []
+            stars: []
         };
     }
-    
+
     componentDidMount(){
         this.setState({
             stars: Array(parseInt(this.props.rating)).fill(0)
         });
     }
 
-render(){
-
-    return(
-        <div className="item">
-            <div className="image"><img src={'img/' + this.props.image} width="100%"/></div>
-            <div className="title">{props.title}</div>
-            <div className="rating">
-                <p>
-                   {
-                       
-                   }
-                </p>
-                Calificacion:
-                <select value={props.rating}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
+    render(){
+        return(
+            <div className="item">
+                <div className="image"><img src={'img/' + this.props.image} width="100%"/></div>
+                <div className="title">{this.props.title}</div>
+                <div className="rating">
+                    <p>
+                       {
+                          this.state.stars.map(x=>
+                             <img src="img/star.png" width="32"/>
+                            ) 
+                       }
+                    </p>
+                    Calificacion:
+                    <select value={props.rating}>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                </div>
+    
+             <div className="actions">
+                 <button>Eliminar</button>
+             </div>
             </div>
+        );
+    }
 
-         <div className="actions">
-             <button>Eliminar</button>
-         </div>
-        </div>
-    );
-}
 }
 
 export default Item;
